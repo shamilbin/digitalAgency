@@ -16,7 +16,7 @@ dark:text-white"
 
       <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-[84px]  font-medium xl:leading-[95px] max-w-5xl">
         Turning Imagination into{" "}
-        <span className="bg-gradient-to-r from-[#1c11b0] via-[#5044E5] to-[#546783] bg-clip-text text-transparent animate-gradient-x">
+        <span className="bg-gradient-to-r from-[#c21c06] via-[#13099d] to-[#46047fd7] bg-clip-text text-transparent animate-gradient-x">
           digital
         </span>
         impact.
@@ -26,6 +26,10 @@ dark:text-white"
         Creating meaningful connections and turning big ideas into interactive
         digital experiences.
       </p>
+      <div className="relative">
+        <img src={assets.hero_img} className="w-full max-w-6xl" alt="" />
+        <img src={assets.bgImage1} className="absolute -top-4 -right-40 sm:-top-100 sm:-right-70 -z-1 dark:hidden" alt="" />
+      </div>
     </div>
   );
 };
