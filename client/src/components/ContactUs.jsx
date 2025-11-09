@@ -45,7 +45,7 @@ const ContactUs = () => {
       <Title
         title={"Reach Out to us."}
         desc={
-          "From strategy to excution  we craft digital solution that move your business forward "
+          "From strategy to execution  we craft digital solution that move your business forward "
         }
       />
 
