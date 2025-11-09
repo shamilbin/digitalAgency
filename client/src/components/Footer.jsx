@@ -9,6 +9,13 @@ const Footer = () => {
             <div>
                 <img src={assets.logo} className='w-32 sm:w-44' alt="" />
                 <p className='max-w-md'>From Strategy to execution , We craft digital solution that move your business forward.</p>
+
+                <ul>
+                    <li><a className='hover:text-primary' href="#hero">Home</a></li>
+                    <li><a className='hover:text-primary' href="#services">Services</a></li>
+                    <li><a className='hover:text-primary' href="#our-work">Our Work</a></li>
+                    <li><a className='hover:text-primary' href="#contact-us">Contact Us</a></li>
+                </ul>
             </div>
             <div>
 
