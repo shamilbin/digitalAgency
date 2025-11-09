@@ -52,7 +52,7 @@ dark:text-white"
         viewport={{ once: true }}
         className="relative"
       >
-        <img src={assets.hero_img} className="w-full max-w-6xl" alt="" />
+        <img src={assets.hero_img} className="w-full rounded-4xl max-w-6xl" alt="" />
         <img
           src={assets.bgImage1}
           className="absolute -top-4 -right-40 sm:-top-100 sm:-right-70 -z-1 dark:hidden"
