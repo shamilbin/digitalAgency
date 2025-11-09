@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import assets from "../assets/assets";
 import ThemeToggle from "./ThemeToggle";
+import { motion } from "motion/react";
 
 const Navbar = ({ theme, setTheme }) => {
   const [sideBarOpen, setSideBarOpen] = useState(false);
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 1 }}
+      transition={{ duration: 0.6, ease: "easeInOut" }}
       className="flex justify-between items-center px-4 sm:px-12 lg:px-24 xl:px-40 
     py-4 sticky top-0 z-20 backdrop-blur-xl font-medium bg-white/50 dark:bg-gray-900/70"
     >
@@ -27,31 +31,47 @@ const Navbar = ({ theme, setTheme }) => {
           src={assets.close_icon}
           alt="clase-icone"
           className="w-5 absolute right-4 top-4 sm:hidden"
-           onClick={() => setSideBarOpen(false)}
+          onClick={() => setSideBarOpen(false)}
         />
         <a
           href="#"
           className="sm:hover:border-b"
-         onClick={()=>setSideBarOpen(false)}
+          onClick={() => setSideBarOpen(false)}
         >
           Home
         </a>
-        <a href="#services" className="sm:hover:border-b"  onClick={()=>setSideBarOpen(false)}>
+        <a
+          href="#services"
+          className="sm:hover:border-b"
+          onClick={() => setSideBarOpen(false)}
+        >
           Services
         </a>
-        <a href="#our-work" className="sm:hover:border-b"  onClick={()=>setSideBarOpen(false)}>
+        <a
+          href="#our-work"
+          className="sm:hover:border-b"
+          onClick={() => setSideBarOpen(false)}
+        >
           Our Work
         </a>
-        <a href="#team" className="sm:hover:border-b"  onClick={()=>setSideBarOpen(false)}>
+        <a
+          href="#team"
+          className="sm:hover:border-b"
+          onClick={() => setSideBarOpen(false)}
+        >
           Team
         </a>
-        <a href="#contact-us" className="sm:hover:border-b"  onClick={()=>setSideBarOpen(false)}>
+        <a
+          href="#contact-us"
+          className="sm:hover:border-b"
+          onClick={() => setSideBarOpen(false)}
+        >
           Contack Us
         </a>
       </div>
 
       <div className="flex items-center gap-2 sm:gap-4">
-       <ThemeToggle theme={theme} setTheme={setTheme} />
+        <ThemeToggle theme={theme} setTheme={setTheme} />
         <img
           src={theme === "dark" ? assets.menu_icon_dark : assets.menu_icon}
           alt=""
@@ -60,13 +80,13 @@ const Navbar = ({ theme, setTheme }) => {
         />
 
         <a
-          href="contact-us"
+          href="#contact-us"
           className="text-sm max-sm:hidden flex items-center gap-2 bg-primary text-white px-6 py-2 rounded-full cursor-pointer transition-all hover:scale-103"
         >
           Contact Us <img src={assets.arrow_icon} width={14} alt="" />
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
