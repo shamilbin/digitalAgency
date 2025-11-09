@@ -8,7 +8,7 @@ const Footer = () => {
         <div className='flex justify-between lg:items-center max-lg:flex-col gap-10'>
             <div>
                 <img src={assets.logo} className='w-32 sm:w-44' alt="" />
-                <p>From Strategy to execution , We craft digital solution that move your business forward.</p>
+                <p className='max-w-md'>From Strategy to execution , We craft digital solution that move your business forward.</p>
             </div>
             <div>
 
